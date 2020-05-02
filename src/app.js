@@ -105,7 +105,7 @@ socket.on('join',({username,room} ,callback)=>{
     // io.to.emit to emit message to everyone that specific room
     // socket.broadcast.to.emit to everyone except that person
     // socket.emit('message',generatemessage(`${username} has joined!`))
-    socket.emit('message',generatemessage('Admin','Welcome'))
+    socket.emit('message',generatemessage('Admin - Ritik','Welcome to realtalky'))
     socket.broadcast.to(user.room).emit('message',generatemessage(`${user.username} has joined!`))
     io.to(user.room).emit('roomData',{
         room:user.room,
